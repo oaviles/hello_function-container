@@ -12,3 +12,7 @@ docker build --tag <DOCKER_ID>/<IMAGE_NAME>:v1.0.0 .
 docker run -p 8080:80 -it <DOCKER_ID>/azurefunctionsimage:v1.0.0
 ```
 #### Publish the container image to a registry, you can reuse this pipeline ["Build and Push image to Docker Hub"](https://github.com/oaviles/hello_function-container/actions/workflows/docker-image.yml)
+
+> Note: This page is getting updated so make sure to check regularly for new resources.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
