@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "oafuntion_container": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7234",
+      "launchBrowser": false
+    }
+  }
+}
