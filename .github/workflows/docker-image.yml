@@ -1,0 +1,25 @@
+name: Build and Push image to Docker Hub
+
+# Controls when the workflow will run
+on: workflow_dispatch
+
+env:
+  TAG: ${{ github.sha }}
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+           
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: oaviles/ratings-api:${{ env.TAG }}
+          
+        
