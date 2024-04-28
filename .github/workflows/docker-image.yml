@@ -5,6 +5,9 @@ on: workflow_dispatch
 
 env:
   TAG: ${{ github.sha }}
+  IMAGE_NAME: oafunctioncontainer
+  DOCKER_ACCOUNT: oaviles
+  
 
 jobs:
   login:
@@ -20,6 +23,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: oaviles/ratings-api:${{ env.TAG }}
+          tags: ${{ env.DOCKER_ACCOUNT }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
           
         
