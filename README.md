@@ -11,6 +11,11 @@ func init --docker
 docker build --tag <DOCKER_ID>/<IMAGE_NAME>:v1.0.0 .
 docker run -p 8080:80 -it <DOCKER_ID>/azurefunctionsimage:v1.0.0
 ```
+#### Test you function(s) locally
+```sh
+http://localhost:8080/api/httpexample
+```
+
 #### Publish the container image to a registry, you can reuse this pipeline ["Build and Push image to Docker Hub"](https://github.com/oaviles/hello_function-container/actions/workflows/docker-image.yml)
 
 #### Deploy image on any Cloud Platform
